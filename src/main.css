@@ -1,0 +1,75 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+:root {
+	--color-active: green;
+	--bg-color: #242424;
+	--color: ghostwhite;
+
+	font-family: 'Courier New', Courier, monospace;
+	color: var(--color);
+	background-color: var(--bg-color);
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center	;
+  justify-content: center;
+}
+
+ #rand {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+
+	font-size: 2rem;
+	font-family: inherit;
+	font-weight: bold;
+
+	padding: 0.5em;
+}
+
+#text {
+	word-break: break-all;
+}
+#text.regen {
+	color: color-mix(in srgb, var(--color), black 20%);
+}
+
+.controls {
+	display: flex;
+	gap: 1px;
+}
+.control {
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 0.5em;
+
+	cursor: pointer;
+	color: var(--color);
+	background-color: color-mix(in hsl, var(--bg-color), white 20%);
+
+	padding: 0.7em;
+}
+.control:first-child {
+	border-top-left-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+}
+.control:last-child {
+	border-top-right-radius: 0.3em;
+	border-bottom-right-radius: 0.3em;
+}
+.control:hover {
+	background-color: color-mix(in hsl, var(--bg-color), white 30%);
+}
+.control:active {
+	background-color: color-mix(in hsl, var(--bg-color), white 35%);
+}
+
+.control.active {
+	background-color: var(--color-active);
+}

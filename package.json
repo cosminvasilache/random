@@ -1,0 +1,26 @@
+{
+  "name": "random",
+  "keywords": [
+    "random",
+    "password"
+  ],
+  "author": "Cosmin Vasilache",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "",
+    "publish": "npm run build && gh-pages --dist dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-singlefile": "^2.1.0"
+  }
+}
